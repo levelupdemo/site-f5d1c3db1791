@@ -1,0 +1,400 @@
+<!--
+  Built by LevelUpAI (levelupaico.com) for Don Ngo.
+  Build ID: LVLUP-bf9a4491de17
+  Built: 2026-09-22T17:02:40.218Z
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="generator" content="LevelUpAI Site Builder">
+<meta name="levelupai-build-id" content="LVLUP-bf9a4491de17">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Don Ngo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sage:#E3EBDA;
+    --sage-deep:#D7E2C9;
+    --lime:#D6F24C;
+    --forest:#16240F;
+    --forest-soft:#243A1B;
+    --ink:#16240F;
+    --white:#FDFDFB;
+  }
+
+  /* ---------- STYLE SWITCHER WIDGET ---------- */
+  .style-switcher{
+    position:fixed;bottom:24px;right:24px;z-index:100;
+    font-family:'Archivo',sans-serif;
+  }
+  .style-switcher .toggle-btn{
+    width:52px;height:52px;border-radius:50%;
+    background:var(--forest);border:3px solid var(--white);
+    box-shadow:0 6px 18px rgba(0,0,0,0.3);
+    cursor:pointer;display:flex;align-items:center;justify-content:center;
+    font-size:1.3rem;transition:transform .2s ease;
+  }
+  .style-switcher .toggle-btn:hover{transform:scale(1.08);}
+  .style-switcher .panel{
+    position:absolute;bottom:64px;right:0;
+    background:var(--white);border:1.5px solid var(--forest);
+    padding:14px;width:190px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    display:none;flex-direction:column;gap:8px;
+  }
+  .style-switcher .panel.open{display:flex;}
+  .style-switcher .panel-label{
+    font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--forest-soft);font-weight:700;margin-bottom:2px;
+  }
+  .style-switcher .swatch-btn{
+    display:flex;align-items:center;gap:10px;
+    background:transparent;border:1.5px solid rgba(22,36,15,0.15);
+    padding:8px 10px;cursor:pointer;text-align:left;
+    font-family:'Archivo',sans-serif;font-size:0.8rem;font-weight:500;color:var(--ink);
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .style-switcher .swatch-btn:hover{border-color:var(--forest);background:rgba(0,0,0,0.03);}
+  .style-switcher .swatch-btn.active{border-color:var(--forest);border-width:2px;font-weight:700;}
+  .style-switcher .dots{display:flex;flex-shrink:0;}
+  .style-switcher .dots span{width:14px;height:14px;border-radius:50%;margin-left:-4px;border:1.5px solid #fff;}
+  .style-switcher .dots span:first-child{margin-left:0;}
+  @media (max-width:640px){
+    .style-switcher{bottom:16px;right:16px;}
+    .style-switcher .toggle-btn{width:46px;height:46px;font-size:1.1rem;}
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Archivo',sans-serif;
+    background:var(--sage);
+    color:var(--ink);
+    overflow-x:hidden;
+  }
+  a{text-decoration:none;color:inherit;}
+  img{display:block;max-width:100%;}
+  .eyebrow{font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--forest-soft);}
+
+  /* ---------- LEVELUPAI BRANDING BAR ---------- */
+  .lvlup-brand-bar{display:none;}
+  body[data-lvlup-branding="true"] .lvlup-brand-bar{
+    display:flex;align-items:center;justify-content:space-between;
+    background:var(--forest);color:var(--white);padding:12px 5%;font-family:'Archivo',sans-serif;
+    flex-wrap:wrap;gap:10px;
+  }
+  .lvlup-brand-left{display:flex;align-items:center;gap:10px;font-size:0.85rem;}
+  .lvlup-brand-dot{width:8px;height:8px;border-radius:50%;background:var(--lime);flex-shrink:0;}
+  .lvlup-brand-sub{color:rgba(255,255,255,0.55);margin-left:6px;font-weight:400;}
+  .lvlup-brand-cta{
+    background:var(--lime);color:var(--forest);padding:9px 20px;border-radius:100px;
+    font-weight:700;font-size:0.8rem;letter-spacing:0.5px;text-decoration:none;
+    white-space:nowrap;transition:opacity .2s ease;
+  }
+  .lvlup-brand-cta:hover{opacity:0.85;}
+  @media (max-width:600px){
+    .lvlup-brand-bar{padding:10px 4%;}
+    .lvlup-brand-sub{display:none;}
+  }
+
+  /* ---------- NAV ---------- */
+  .navbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px 5%;
+    position:relative;z-index:30;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;line-height:1.15;}
+  .logo .mark{
+    width:30px;height:30px;border-radius:50% 50% 50% 0;
+    background:var(--forest);flex-shrink:0;
+  }
+  .nav-links{display:flex;align-items:center;gap:32px;}
+  .nav-links a:not(.cta){font-size:0.95rem;font-weight:500;color:var(--forest-soft);padding-bottom:2px;border-bottom:1.5px solid transparent;transition:border-color .2s;}
+  .nav-links a:not(.cta):hover{border-color:var(--forest-soft);}
+  .nav-links a.current{border-color:var(--forest-soft);}
+  .cta{
+    background:var(--forest);color:var(--white);
+    padding:13px 26px;border-radius:100px;font-weight:600;font-size:0.85rem;letter-spacing:0.5px;
+    transition:background .2s, transform .2s;
+  }
+  .cta:hover{background:var(--forest-soft);transform:translateY(-1px);}
+  .nav-toggle{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--forest);}
+
+  /* ---------- PAGE INTRO ---------- */
+  .page-intro{padding:50px 5% 40px;}
+  .page-intro .eyebrow{margin-bottom:14px;display:block;}
+  .page-intro h1{font-size:clamp(2.2rem,4.4vw,3.4rem);font-weight:800;letter-spacing:-1px;line-height:1.02;max-width:760px;}
+  .page-intro p{font-size:1.05rem;line-height:1.65;color:var(--forest-soft);max-width:620px;margin-top:18px;}
+
+  /* ---------- WHY CHOOSE (LIME) ---------- */
+  .why{background:var(--lime);padding:80px 5%;margin-top:40px;}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  .why h2{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:800;letter-spacing:-1px;line-height:1;margin-bottom:26px;}
+  .why-blurb{font-size:1rem;line-height:1.7;max-width:420px;}
+  .why-list{display:flex;flex-direction:column;}
+  .why-item{
+    display:flex;align-items:flex-start;gap:18px;
+    padding:20px 0;border-top:1.5px solid rgba(22,36,15,0.25);
+  }
+  .why-item:last-child{border-bottom:1.5px solid rgba(22,36,15,0.25);}
+  .why-item .plus{font-size:1.4rem;font-weight:700;line-height:1;}
+  .why-item h4{font-size:1.5rem;font-weight:700;letter-spacing:-0.5px;}
+
+  /* ---------- STORY ---------- */
+  .story{padding:80px 5%;background:var(--sage-deep);}
+  .story-inner{max-width:700px;margin:0 auto;}
+  .story-inner h2{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:800;letter-spacing:-1px;margin-bottom:24px;}
+  .story-inner p{font-size:1.05rem;line-height:1.75;color:var(--forest-soft);margin-bottom:18px;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--sage-deep);padding:80px 5%;}
+  .contact-photo{
+    border-radius:4px;overflow:hidden;height:280px;margin-bottom:44px;
+    background-size:cover;background-position:center;
+    background-image:url('uploads/houston-don-ngo/google_6.jpg');
+  }
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;}
+  .contact-grid h2{font-size:clamp(2.2rem,4vw,3.2rem);font-weight:800;letter-spacing:-1px;line-height:1;}
+  .contact-info p{font-size:1rem;line-height:1.7;color:var(--forest-soft);margin-bottom:24px;}
+  .info-row{display:flex;gap:14px;margin-bottom:16px;font-size:0.95rem;}
+  .info-row .label{font-weight:700;min-width:70px;}
+  .btn-solid{
+    display:inline-block;background:var(--forest);color:var(--white);
+    padding:14px 30px;border-radius:100px;font-weight:600;font-size:0.9rem;margin-top:10px;
+    transition:background .2s, transform .2s;
+  }
+  .btn-solid:hover{background:var(--forest-soft);transform:translateY(-1px);}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest);color:var(--white);padding:70px 5% 40px;}
+  footer h2{
+    font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;letter-spacing:-1px;
+    line-height:1;margin-bottom:50px;max-width:600px;
+  }
+  .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,0.15);}
+  .footer-grid a{display:block;}
+  .footer-col .label{font-size:0.75rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:12px;font-weight:600;}
+  .footer-col p, .footer-col a{font-size:0.95rem;margin-bottom:8px;color:rgba(255,255,255,0.9);}
+  .footer-links a{transition:opacity .2s;}
+  .footer-links a:hover{opacity:0.6;}
+  .footer-bottom{
+    display:flex;justify-content:space-between;align-items:center;
+    padding-top:26px;font-size:0.8rem;color:rgba(255,255,255,0.5);flex-wrap:wrap;gap:10px;
+  }
+  .footer-bottom a{color:rgba(255,255,255,0.6);}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .why-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;gap:24px;}
+  }
+  @media (max-width:640px){
+    .nav-links{
+      position:absolute;top:100%;left:0;right:0;background:var(--sage);
+      flex-direction:column;align-items:flex-start;gap:0;
+      max-height:0;overflow:hidden;transition:max-height .3s ease;
+      padding:0 5%;
+    }
+    .nav-links.open{max-height:400px;padding:10px 5% 20px;}
+    .nav-links a:not(.cta){width:100%;padding:12px 0;border-bottom:1px solid rgba(22,36,15,0.1);}
+    .nav-links .cta{margin-top:12px;display:inline-block;}
+    .nav-toggle{display:block;}
+  }
+</style>
+</head>
+<body data-lvlup-branding="true">
+<span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;padding:0;margin:-1px;" aria-hidden="true">Website built by LevelUpAI for Don Ngo — Build LVLUP-bf9a4491de17 — levelupaico.com</span>
+
+
+<div class="lvlup-brand-bar">
+  <div class="lvlup-brand-left">
+    <span class="lvlup-brand-dot"></span>
+    <span>Don Ngo<span class="lvlup-brand-sub">Website design by LevelUpAI</span></span>
+  </div>
+  <a href="https://levelupaico.com/#contact" target="_blank" rel="noopener" class="lvlup-brand-cta">Get This Site</a>
+</div>
+
+<nav class="navbar">
+  <div class="logo"><span class="mark"></span>Don Ngo</div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html" class="current">About</a>
+    <a href="about.html#contact" class="cta">Get In Touch</a>
+  </div>
+</nav>
+
+<section class="page-intro">
+  <span class="eyebrow">real estate agencies &middot; Houston</span>
+  <h1>About Don Ngo</h1>
+  <p>Don Ngo has become a name Houston passes along &mdash; not through advertising, but through the work itself. Every job carries our name, so we show up on time, price honestly, and stand behind everything we do.</p>
+</section>
+
+<section class="story" id="why">
+  <div class="story-inner">
+    <h2>Our Story</h2>
+    <p>Don Ngo started with a simple idea: do the work right, treat people fairly, and let the results speak for themselves. Years later, that's still exactly how we run things.</p>
+    <p>Every real estate agencies job we take on in Houston carries our name — so we show up on time, we're upfront about pricing, and we stand behind what we do long after the job is finished.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-photo"></div>
+  <div class="contact-grid">
+    <h2>Get In Touch with Don Ngo</h2>
+    <div class="contact-info">
+      <p>Reach out today for a free quote &mdash; Don Ngo proudly serves Houston and the surrounding area.</p>
+      <div class="info-row"><span class="label">Phone</span><span>(281) 704-3436</span></div>
+      <div class="info-row"><span class="label">Address</span><span>2011 Leeland St St 100, Houston, TX 77003, USA</span></div>
+      <a href="tel:(281) 704-3436" class="btn-solid">Call Now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h2>Get In Touch with Don Ngo</h2>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="label">Contact</div>
+      <p>2011 Leeland St St 100, Houston, TX 77003, USA</p>
+      <p>(281) 704-3436</p>
+    </div>
+    <div class="footer-col footer-links">
+      <div class="label">Site</div>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="about.html#contact">Contact us</a>
+    </div>
+    <div class="footer-col">
+      <div class="label">Don Ngo</div>
+      <p>real estate agencies serving Houston</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; Don Ngo</span>
+    <span></span>
+  </div>
+</footer>
+
+<div class="style-switcher">
+  <div class="panel" id="stylePanel">
+    <div class="panel-label">Color Style</div>
+    <button class="swatch-btn" data-style="sageLime">
+      <span class="dots"><span style="background:#E3EBDA"></span><span style="background:#D6F24C"></span><span style="background:#16240F"></span></span>
+      Sage &amp; Lime
+    </button>
+    <button class="swatch-btn" data-style="dustyCobalt">
+      <span class="dots"><span style="background:#DCE6F0"></span><span style="background:#6EA8FF"></span><span style="background:#0B1E3D"></span></span>
+      Dusty Blue &amp; Cobalt
+    </button>
+    <button class="swatch-btn" data-style="sandTerracotta">
+      <span class="dots"><span style="background:#F3E7DB"></span><span style="background:#FF7A45"></span><span style="background:#2B1B12"></span></span>
+      Sand &amp; Terracotta
+    </button>
+  </div>
+  <button class="toggle-btn" id="styleToggle" aria-label="Change color style">&#127912;</button>
+</div>
+
+<script>
+(function(){
+  var palettes = {
+    sageLime:       { sage:'#E3EBDA', sageDeep:'#D7E2C9', lime:'#D6F24C', forest:'#16240F', forestSoft:'#243A1B', white:'#FDFDFB' },
+    dustyCobalt:    { sage:'#DCE6F0', sageDeep:'#C7D7E5', lime:'#6EA8FF', forest:'#0B1E3D', forestSoft:'#16294A', white:'#FBFCFE' },
+    sandTerracotta: { sage:'#F3E7DB', sageDeep:'#E9D8C5', lime:'#FF7A45', forest:'#2B1B12', forestSoft:'#4A3324', white:'#FEFBF8' }
+  };
+  var root = document.documentElement;
+  var STORAGE_KEY = 'levelupai-site-style-editorial-green';
+
+  function applyStyle(name){
+    var p = palettes[name];
+    if(!p) return;
+    root.style.setProperty('--sage', p.sage);
+    root.style.setProperty('--sage-deep', p.sageDeep);
+    root.style.setProperty('--lime', p.lime);
+    root.style.setProperty('--forest', p.forest);
+    root.style.setProperty('--forest-soft', p.forestSoft);
+    root.style.setProperty('--ink', p.forest);
+    root.style.setProperty('--white', p.white);
+    document.querySelectorAll('.style-switcher .swatch-btn').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-style') === name);
+    });
+    try{ localStorage.setItem(STORAGE_KEY, name); }catch(e){}
+  }
+
+  document.getElementById('styleToggle').addEventListener('click', function(){
+    document.getElementById('stylePanel').classList.toggle('open');
+  });
+
+  document.querySelectorAll('.style-switcher .swatch-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      applyStyle(btn.getAttribute('data-style'));
+    });
+  });
+
+  var saved = null;
+  try{ saved = localStorage.getItem(STORAGE_KEY); }catch(e){}
+  applyStyle(saved || 'sageLime');
+})();
+</script>
+
+<style>
+  .device-toggle{position:fixed;top:16px;right:16px;z-index:150;display:flex;gap:4px;background:#fff;border-radius:100px;padding:4px;box-shadow:0 6px 18px rgba(0,0,0,0.15);}
+  .device-toggle button{width:36px;height:36px;border-radius:50%;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#666;transition:background .2s ease,color .2s ease;}
+  .device-toggle button.active{background:#111;color:#fff;}
+  .device-toggle svg{width:18px;height:18px;}
+  @media (max-width:600px){ .device-toggle{display:none;} }
+
+  .phone-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:500;display:none;align-items:center;justify-content:center;padding:30px;}
+  .phone-overlay.open{display:flex;}
+  .phone-frame{width:375px;height:812px;max-height:90vh;background:#111;border-radius:40px;padding:14px;box-shadow:0 30px 80px rgba(0,0,0,0.5);position:relative;}
+  .phone-frame::before{content:'';position:absolute;top:14px;left:50%;transform:translateX(-50%);width:120px;height:24px;background:#111;border-radius:0 0 16px 16px;z-index:2;}
+  .phone-frame iframe{width:100%;height:100%;border:none;border-radius:28px;background:#fff;}
+  .phone-close{position:absolute;top:-44px;right:0;background:rgba(255,255,255,0.15);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.2rem;line-height:1;}
+</style>
+
+<div class="device-toggle">
+  <button id="laptopBtn" class="active" onclick="setDeviceView('laptop')" aria-label="Desktop view">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+  </button>
+  <button id="phoneBtn" onclick="setDeviceView('phone')" aria-label="Phone view">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+  </button>
+</div>
+
+<div class="phone-overlay" id="phoneOverlay">
+  <div class="phone-frame">
+    <button class="phone-close" onclick="setDeviceView('laptop')" aria-label="Close phone view">&times;</button>
+    <iframe id="phoneFrame" src=""></iframe>
+  </div>
+</div>
+
+<script>
+(function(){
+  function setDeviceView(mode){
+    var overlay = document.getElementById('phoneOverlay');
+    var laptopBtn = document.getElementById('laptopBtn');
+    var phoneBtn = document.getElementById('phoneBtn');
+    var frame = document.getElementById('phoneFrame');
+    if(mode === 'phone'){
+      frame.src = window.location.href;
+      overlay.classList.add('open');
+      laptopBtn.classList.remove('active');
+      phoneBtn.classList.add('active');
+    } else {
+      overlay.classList.remove('open');
+      frame.src = '';
+      laptopBtn.classList.add('active');
+      phoneBtn.classList.remove('active');
+    }
+  }
+  window.setDeviceView = setDeviceView;
+})();
+</script>
+
+</body>
+</html>
